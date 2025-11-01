@@ -1,5 +1,9 @@
 name: Deploy to GitHub Pages
 
+# Permissão para que a action possa gravar no repositório (necessário para push para gh-pages)
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ main ]

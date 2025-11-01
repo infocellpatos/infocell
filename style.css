@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --primary-cyan: #06b6d4; /* Tailwind CSS cyan-500 */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.hero-section {
+    background: url('https://r2.flowith.net/files/746587f5-972e-4011-aa6a-1448f336346a/S6OFT-L7GG5-electronics_maintenance_workbench_index_0@1024x1024@1024x1024.png') no-repeat center center/cover;
+}
+
+.text-primary-cyan {
+    color: var(--primary-cyan);
+}
+
+.bg-primary-cyan {
+    background-color: var(--primary-cyan);
+}
+
+.hover\\:bg-cyan-600:hover {
+    background-color: #0891b2; /* Tailwind CSS cyan-600 */
+}
+
+.focus\\:ring-primary-cyan:focus {
+    --tw-ring-color: var(--primary-cyan);
+}
+
+.focus\\:border-primary-cyan:focus {
+    border-color: var(--primary-cyan);
+}
+
+.hover\\:border-primary-cyan:hover {
+    border-color: var(--primary-cyan);
+}
+
+.aspect-w-16 {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.aspect-h-9 {
+  /* This class is a companion to aspect-w-16 and works with it */
+}
+
+.aspect-w-16 > *,
+.aspect-h-9 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Skip-link helper: visible when focused */
+.focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: #fff;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+}
+
+/* Modal for email prompt shown after opening WhatsApp */
+#email-modal {
+    display: none; /* JS toggles to flex */
+    align-items: center;
+    justify-content: center;
+}
+
+#email-modal > div {
+    animation: modal-pop .14s ease-out;
+}
+
+@keyframes modal-pop {
+    from { transform: translateY(6px) scale(0.995); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* Header visual improvements */
+header {
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+header .container > .flex {
+    align-items: center;
+}
+
+header img { /* responsive logo — restored size */
+    height: 48px; /* larger by default to match previous appearance */
+}
+
+@media (max-width: 640px) {
+    header img { height: 36px; }
+    main.pt-20 { padding-top: 4.75rem; }
+}
+
+/* slight shadow and transition for header */
+header { transition: background-color 160ms ease, box-shadow 160ms ease; }
+header.scrolled { box-shadow: 0 6px 20px rgba(2,6,23,0.45); }
